@@ -1,0 +1,443 @@
+// ==== common scss started here ====
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Poppins:wght@300;400;500;700&display=swap");
+
+$manrope: "Manrope", sans-serif;
+$popins: "Poppins", sans-serif;
+$txt__color: #282938;
+$white: #fff;
+$tint__blue: rgba(28, 30, 83, 1);
+$yellow: #fcd980;
+$blue: rgba(82, 57, 250, 1);
+$common__btn_txt: #1b1c2b;
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 0;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.common__heading {
+  color: $popins;
+  font-family: $popins;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+}
+.common__paragraph {
+  color: #282938;
+  font-family: $popins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  opacity: 0.7;
+}
+.common__btn {
+  align-items: center;
+  justify-content: center;
+  padding: 16px 56px;
+  border-radius: 41px;
+  color: $txt__color;
+  font-family: $manrope;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  border: 2px solid transparent;
+  background: transparent;
+  color: $white;
+  border: 2px solid rgba(244, 246, 252, 0.2);
+  text-transform: capitalize;
+  transition: 0.3s linear all;
+  &:hover {
+    color: $common__btn_txt;
+    background: #fcd980;
+  }
+}
+// ==== common scss ende here  here ====
+
+// ==== navbar scss started here ====
+#navbar {
+  height: 92px;
+  position: absolute;
+  z-index: 1;
+  .navbar__wrapper {
+    height: auto;
+    width: 1310px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 305px;
+    .navbar__logo {
+      position: relative;
+      width: 122px;
+      height: 28px;
+      overflow: hidden;
+      margin-top: 32px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .navbar__menu {
+      display: flex;
+      flex-direction: row;
+      column-gap: 32px;
+      margin-left: 452px;
+      margin-top: 32px;
+      li {
+        position: relative;
+        transition: 0.3s linear all;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          width: 80%;
+          background-color: $blue;
+          bottom: 0;
+          left: 0;
+          border-radius: 50px;
+          opacity: 0;
+          transition: 0.3s linear all;
+          margin-left: 5px;
+        }
+        &:hover::after {
+          opacity: 1;
+        }
+        .navbar__menu__item {
+          color: $white;
+          font-family: $popins;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 28px;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .navbar__btn {
+      margin-left: 48px;
+      margin-top: 16px;
+      button {
+        width: 185px;
+        height: 60px;
+        color: $white;
+        font-family: $popins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        transition: 0.3s linear all;
+        padding: 0;
+        &:hover {
+          color: $common__btn_txt;
+        }
+      }
+    }
+  }
+}
+// ==== navbar scss ende here  here ====
+// ==== common scss started here ====
+#banner {
+  position: relative;
+  height: 760px;
+  background-color: $tint__blue;
+  z-index: 0;
+  .banner__wrapper {
+    height: auto;
+    width: 1310px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 305px;
+    margin-top: 218px;
+    position: absolute;
+    .banner__contents {
+      display: flex;
+      flex-direction: column;
+      .main__heading {
+        width: 582px;
+        color: $white;
+        font-family: $popins;
+        font-size: 54px;
+        font-weight: 600;
+        line-height: 74px;
+      }
+      p {
+        color: $white;
+        margin-top: 24px;
+        width: 562px;
+      }
+      .banner__btn {
+        display: flex;
+        flex-direction: row;
+        column-gap: 40px;
+        margin-top: 48px;
+        button {
+          &:nth-child(2) {
+            border: 2px solid transparent;
+          }
+        }
+      }
+    }
+    .banner__img {
+      width: 638px;
+      height: 361.115px;
+      margin-left: 60px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+// ==== common scss ende here  here ====
+// ==== work scss started here ====
+#work {
+  height: 661px;
+  position: relative;
+  background-color: rgba(244, 246, 252, 1);
+  .work__wrapper {
+    height: auto;
+    width: 1310px;
+    margin: 0 305px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 128px;
+    .work__contents {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      p {
+        width: 405px;
+      }
+      span {
+        color: #2405f2;
+        font-family: $popins;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+        text-align: left;
+      }
+    }
+    .work__cards {
+      width: 631px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-left: 142px;
+      column-gap: 25px;
+      row-gap: 48px;
+      .work__cards_single {
+        height: auto;
+        width: 303px;
+        display: flex;
+        flex-direction: column;
+        .work__card_number {
+          height: 50px;
+          width: 50px;
+          overflow: hidden;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .work__heading {
+          width: 328px;
+          color: $txt__color;
+          font-family: $popins;
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 48px;
+          margin-top: 16px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+// ==== work scss ende here  here ====
+// ==== projects scss started here ====
+#projects {
+  height: 984px;
+  position: relative;
+  background-color: $white;
+  .projects__wrapper {
+    position: absolute;
+    width: 1310px;
+    height: auto;
+    margin: 128px 305px;
+    display: flex;
+    flex-direction: column;
+    .project__headings {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        color: $txt__color;
+        font-family: $popins;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+    }
+    .projects__cards {
+      height: auto;
+      width: 100%;
+      margin-top: 79px;
+      .projects__single__card {
+        position: absolute;
+        z-index: 0;
+        &:nth-child(1) {
+          width: 843px;
+          height: 600px;
+          left: 0;
+          z-index: 0;
+          &::before {
+            content: "";
+            position: absolute;
+            height: 600px;
+            width: 396px;
+            background: linear-gradient(
+              329deg,
+              #1c1e53 -10.96%,
+              rgba(28, 30, 83, 0.42) 103.96%
+            );
+            z-index: 0;
+          }
+          .project__card__content {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            height: auto;
+            width: 313px;
+            margin-top: 312px;
+            margin-left: 48px;
+            .card__heading {
+              color: $white;
+              font-family: $popins;
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 36px;
+            }
+            p {
+              margin-top: 16px;
+              color: $white;
+              margin-bottom: 40px;
+            }
+            span {
+              color: $yellow;
+              font-family: $popins;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 28px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          width: 405px;
+          height: 284px;
+          right: 0;
+          overflow: hidden;
+          &::before {
+            content: "";
+            position: absolute;
+            height: 284px;
+            width: 405px;
+            background: linear-gradient(
+              329deg,
+              #1c1e53 -10.96%,
+              rgba(28, 30, 83, 0.42) 103.96%
+            );
+            z-index: 0;
+          }
+          .project__card__content {
+            height: auto;
+            width: 313px;
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            margin-top: 129px;
+            margin-left: 56px;
+            .card__heading {
+              color: $white;
+              font-family: $popins;
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 36px;
+              width: 213px;
+            }
+            span {
+              color: $yellow;
+              font-family: $popins;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 28px;
+              margin-top: 10px;
+            }
+          }
+        }
+        &:nth-child(3) {
+          width: 405px;
+          height: 284px;
+          right: 0;
+          overflow: hidden;
+          margin-top: 316px;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}
+// ==== projects scss ende here  here ====
+// ==== features scss started here ====
+
+// ==== features scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
+
+// ==== common scss started here ====
+// ==== common scss ende here  here ====
